@@ -1,0 +1,82 @@
+[
+    {
+        "id": "cat_001",
+        "title": "Ceramic Tiles",
+        "category": "Ceramic",
+        "slug": "ceramic-tiles",
+        "description": "Durable and stylish ceramic tiles for modern interiors.",
+        "dimension": "30x30 cm",
+        "image": "https://i.ibb.co.com/5g3LfqcB/ceramic.jpg",
+        "feature": "Durable Stylish"
+    },
+    {
+        "id": "cat_002",
+        "title": "Marble Tiles",
+        "category": "Marble",
+        "slug": "marble-tiles",
+        "description": "Luxurious marble finish tiles for premium spaces.",
+        "dimension": "60x60 cm",
+        "image": "https://i.ibb.co.com/ksCpVQsB/marvel.jpg",
+        "feature": "Luxury Finish"
+    },
+    {
+        "id": "cat_003",
+        "title": "Geometric Tiles",
+        "category": "Geometric",
+        "slug": "geometric-tiles",
+        "description": "Bold geometric patterns for creative designs.",
+        "dimension": "20x20 cm",
+        "image": "https://i.ibb.co.com/W4dS5rCc/geometric.jpg",
+        "feature": "Bold Patterns"
+    },
+    {
+        "id": "cat_004",
+        "title": "Wood Finish Tiles",
+        "category": "Wood",
+        "slug": "wood-finish-tiles",
+        "description": "Natural wood-look tiles with warm aesthetics.",
+        "dimension": "15x60 cm",
+        "image": "https://i.ibb.co.com/35jWVT5n/wood.jpg",
+        "feature": "Natural Warmth"
+    },
+    {
+        "id": "cat_005",
+        "title": "Glossy Tiles",
+        "category": "Glossy",
+        "slug": "glossy-tiles",
+        "description": "High-shine glossy tiles for elegant reflections.",
+        "dimension": "30x60 cm",
+        "image": "https://i.ibb.co.com/XrxdZCtH/glossy.jpg",
+        "feature": "High Shine"
+    },
+    {
+        "id": "cat_006",
+        "title": "Matte Tiles",
+        "category": "Matte",
+        "slug": "matte-tiles",
+        "description": "Smooth matte finish for a subtle modern look.",
+        "dimension": "30x30 cm",
+        "image": "https://i.ibb.co.com/F4Qvm3Qf/mate.jpg",
+        "feature": "Smooth Subtle"
+    },
+    {
+        "id": "cat_007",
+        "title": "Mosaic Tiles",
+        "category": "Mosaic",
+        "slug": "mosaic-tiles",
+        "description": "Artistic mosaic designs for decorative spaces.",
+        "dimension": "10x10 cm",
+        "image": "https://i.ibb.co.com/8Dgwy68q/mosaic.jpg",
+        "feature": "Artistic Design"
+    },
+    {
+        "id": "cat_008",
+        "title": "Stone Tiles",
+        "category": "Stone",
+        "slug": "stone-tiles",
+        "description": "Natural stone texture for rugged elegance.",
+        "dimension": "40x40 cm",
+        "image": "https://i.ibb.co.com/xKQ5KwMT/stone.png",
+        "feature": "Rugged Elegance"
+    }
+]
