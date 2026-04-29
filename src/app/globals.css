@@ -1,15 +1,16 @@
 @import "tailwindcss";
+@import "@heroui/styles";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9f9ff;
+  --foreground: #757780;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-epi: var(--font-epi);
+  --font-man: var(--font-man);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +23,163 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ---
+name: Lumina Architectural Gallery
+colors:
+  surface: '#f9f9ff'
+  surface-dim: '#d8d9e3'
+  surface-bright: '#f9f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f2f3fd'
+  surface-container: '#ecedf7'
+  surface-container-high: '#e6e7f2'
+  surface-container-highest: '#e1e2ec'
+  on-surface: '#191b23'
+  on-surface-variant: '#424754'
+  inverse-surface: '#2e3038'
+  inverse-on-surface: '#eff0fa'
+  outline: '#727785'
+  outline-variant: '#c2c6d6'
+  surface-tint: '#005ac2'
+  primary: '#0058be'
+  on-primary: '#ffffff'
+  primary-container: '#2170e4'
+  on-primary-container: '#fefcff'
+  inverse-primary: '#adc6ff'
+  secondary: '#006b5f'
+  on-secondary: '#ffffff'
+  secondary-container: '#6df5e1'
+  on-secondary-container: '#006f64'
+  tertiary: '#924700'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#b75b00'
+  on-tertiary-container: '#fffbff'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#d8e2ff'
+  primary-fixed-dim: '#adc6ff'
+  on-primary-fixed: '#001a42'
+  on-primary-fixed-variant: '#004395'
+  secondary-fixed: '#71f8e4'
+  secondary-fixed-dim: '#4fdbc8'
+  on-secondary-fixed: '#00201c'
+  on-secondary-fixed-variant: '#005048'
+  tertiary-fixed: '#ffdcc6'
+  tertiary-fixed-dim: '#ffb786'
+  on-tertiary-fixed: '#311400'
+  on-tertiary-fixed-variant: '#723600'
+  background: '#f9f9ff'
+  on-background: '#191b23'
+  surface-variant: '#e1e2ec' */
+/* typography:
+  h1:
+    fontFamily: Epilogue
+    fontSize: 48px
+    fontWeight: '700'
+    lineHeight: '1.1'
+    letterSpacing: -0.03em
+  h2:
+    fontFamily: Epilogue
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: '1.2'
+    letterSpacing: -0.02em
+  h3:
+    fontFamily: Epilogue
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: '1.3'
+    letterSpacing: -0.01em */
+/* body-lg:
+    fontFamily: Manrope
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: '1.6'
+    letterSpacing: 0em
+  body-md:
+    fontFamily: Manrope
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: '1.6'
+    letterSpacing: 0em
+  label-sm:
+    fontFamily: Manrope
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: '1.4'
+    letterSpacing: 0.02em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  section-padding-desktop: 100px
+  section-padding-mobile: 48px
+  card-padding: 24px
+  grid-gutter: 24px
+  stack-sm: 8px
+  stack-md: 16px
+  stack-lg: 32px
+--- */
+
+/* ## Brand & Style
+
+The brand personality of this design system is architectural, precise, and sophisticated. It is designed for a high-end audience of interior designers and homeowners who value craftsmanship and material quality. 
+
+The aesthetic style is **Minimalist-Modern** with subtle **Glassmorphism** influences. It prioritizes the visual impact of high-resolution imagery while providing a structured, gallery-like framework. The UI remains invisible enough to let the product photography shine, yet tactile enough through smooth interactions and scale shifts to feel premium and responsive.
+
+## Colors
+
+This design system utilizes a high-contrast foundation for maximum legibility and depth. The palette is anchored by neutral "Slate" tones that provide a cool, professional backdrop. 
+
+The primary visual interest is driven by a **Blue-to-Teal gradient**, which is reserved for high-priority interactive elements such as primary CTAs, active states, and navigation highlights. In dark mode, the surfaces are layered using deep navy-blacks to maintain a sense of infinite depth, while light mode relies on crisp white surfaces to suggest a clean, airy gallery environment.
+
+## Typography
+
+The typographic strategy pairs a distinctive, geometric heading font with a balanced, modern body face. 
+
+**Headings** utilize tight letter spacing and heavy weights to create a bold, editorial impact reminiscent of architectural magazines. **Body text** is set in a refined sans-serif with generous line heights to ensure long-form readability when describing materials and textures. Labels and secondary metadata should use a slightly increased letter spacing and semi-bold weights to maintain hierarchy without competing with primary headings.
+
+## Layout & Spacing
+
+This design system follows a **Fixed Grid** philosophy for desktop viewing, centering content within a maximum width of 1440px to maintain a premium gallery feel. 
+
+The spacing rhythm is intentionally spacious. Section transitions are defined by significant vertical breathing room (80-120px) to separate different collections or narratives. Element-level spacing follows an 8px base unit. Content within cards and interactive modules should prioritize white space, ensuring that metadata does not feel crowded against the edges of the container.
+
+## Elevation & Depth
+
+Visual hierarchy in this design system is established through a combination of **Ambient Shadows** in light mode and **Low-Contrast Outlines** in dark mode.
+
+- **Light Mode Elevation:** Uses a soft, diffused shadow for cards and floating elements to create a sense of the interface resting just above the background surface. 
+- **Dark Mode Elevation:** Transitions to a border-driven hierarchy. Surfaces use subtle 1px outlines to define edges against the deep background, with elevation expressed by slightly lighter fill colors for elements that are "closer" to the user.
+- **Interactions:** Hover states introduce a subtle glow effect (using the accent gradient colors at low opacity) to indicate focus and interactivity.
+
+## Shapes
+
+The shape language is consistently **Rounded**. A 0.5rem (8px) radius serves as the base for standard buttons and small components, while larger cards and containers utilize a 1rem (16px) or 1.5rem (24px) radius. 
+
+This rounding softens the technological feel of the site, making the gallery feel more organic and approachable. Sharp corners are avoided entirely to maintain the premium, modern aesthetic. Interactive elements like "Pills" or "Tags" may use full rounding to distinguish them from structural layout components.
+
+## Components
+
+### Buttons
+Primary buttons feature the Blue-to-Teal gradient with white text. They include a smooth 200ms transition and a scale-up effect (1.03) on hover. Secondary buttons use a ghost style with a subtle border in light mode or a semi-transparent surface in dark mode.
+
+### Cards
+The centerpiece of the gallery. Cards must have a uniform aspect ratio for tile previews. On hover, the entire card scales (1.03) and the soft shadow intensifies or a subtle glow appears. Content within the card (title, price, dimensions) is padded at 24px.
+
+### Inputs & Selects
+Form fields use a minimal design with a background that matches the card surface. The active state is signaled by a 1px border using the primary blue color and a very soft outer glow.
+
+### Chips & Filters
+Used for tile categories (e.g., "Ceramic", "Marble"). These should be pill-shaped with a light-grey background that transitions to the accent gradient when selected.
+
+### Image Gallery
+The product view should feature a "magnify" interaction. Transitions between images should be a simple, high-quality cross-fade (300ms) to maintain the premium atmosphere. */
