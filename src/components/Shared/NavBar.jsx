@@ -78,7 +78,7 @@ const NavBar = () => {
           ))}
         </ul>
         <div className="flex items-center gap-4 ">
-          <Link href={"/auth/login"}>
+          <Link href={"/auth/signup"}>
             <Button className="text-white">Sign In</Button>
           </Link>
         </div>
