@@ -2,10 +2,9 @@ import TilesCard from "@/components/Shared/TilesCard";
 import { Button, InputGroup } from "@heroui/react";
 import { SlMagnifier } from "react-icons/sl";
 import Categories from "@/../public/categories.json";
+import allTilesInfo from "@/../public/tiles.json";
 
 const ALlTilesPage = () => {
-  const allTilesInfo = Array.from({ length: 12 }, (_, i) => ({ id: i }));
-
   return (
     <div className="bg-[#f9f9ff] py-10 lg:py-16">
       <div className="container mx-auto px-4">
@@ -42,7 +41,7 @@ const ALlTilesPage = () => {
                 <Button
                   key={ind}
                   className="
-                    flex-shrink-0 px-4 py-2 rounded-full text-sm md:text-base
+                    shrink-0 px-4 py-2 rounded-full text-sm md:text-base
                     border border-gray-200 bg-white text-gray-700
                     hover:bg-[#3B82F6] hover:text-white hover:border-[#3B82F6]
                     transition-all duration-300

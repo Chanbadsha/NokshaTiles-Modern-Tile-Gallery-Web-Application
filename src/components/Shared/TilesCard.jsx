@@ -2,27 +2,22 @@ import { Button, Card } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
 
-const cardInfo = {
-  id: "cat_008",
-  title: "Stone Tiles",
-  category: "Stone",
-  slug: "stone-tiles",
-  description: "Natural stone texture for rugged elegance.",
-  dimension: "40x40 cm",
-  image: "https://i.ibb.co.com/xKQ5KwMT/stone.png",
-  feature: "Rugged Elegance",
-};
-
-const TilesCard = () => {
-  const { title, slug, dimension, feature, image, category } = cardInfo;
+const TilesCard = ({ tilesInfo }) => {
+  const { title, image, category, price, dimensions, material, id } = tilesInfo;
+  const slug = title
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]/g, "");
+  const ids = slug + "_" + id;
 
   return (
     <Card className="w-full overflow-hidden rounded-2xl border border-gray-100 bg-white hover:shadow-xl transition-all duration-300 group">
       {/* IMAGE SECTION */}
       <div className="relative h-56 w-full overflow-hidden">
         {/* Category Badge */}
-        <span className="absolute top-3 left-3 z-10 bg-black/60 text-white text-xs px-3 py-1 rounded-full backdrop-blur-md">
+        <span className="absolute capitalize top-3 left-3 z-10 bg-black/60 text-white text-xs px-3 py-1 rounded-full backdrop-blur-md">
           {category}
         </span>
 
@@ -35,7 +30,7 @@ const TilesCard = () => {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
       </div>
 
       {/* CONTENT */}
@@ -46,16 +41,26 @@ const TilesCard = () => {
           </Card.Title>
 
           <Card.Description className="text-sm text-gray-500 leading-relaxed">
-            {dimension} • {feature}
+            {dimensions} • {material}
           </Card.Description>
         </Card.Header>
 
         {/* FOOTER */}
-        <Card.Footer className="pt-2">
-          <Link href={`/${slug}`} className="w-full">
-            <Button className="w-full rounded-xl bg-gradient-to-r from-[#004395] to-[#3B82F6] text-white font-medium hover:from-[#3B82F6] hover:to-[#004395] transition-all duration-300 hover:-translate-y-1">
-              View Details
-            </Button>
+        <Card.Footer className="pt-2 flex  justify-between items-center">
+          {/* Price */}
+          <p className="flex items-end gap-1 text-blue-600 font-semibold text-base md:text-lg">
+            ${price}
+            <span className="text-xs md:text-sm text-gray-500 font-normal">
+              /m²
+            </span>
+          </p>
+          {/* CTA */}
+          <Link
+            href={`/tiles-details/${ids}`}
+            className="inline-flex justify-end items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 transition-all group"
+          >
+            View All
+            <FaArrowRightLong className="group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
         </Card.Footer>
       </div>

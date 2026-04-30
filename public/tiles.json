@@ -1,0 +1,707 @@
+[
+    {
+        "id": "tile_001",
+        "title": "Ceramic Blue Tile",
+        "description": "A premium ceramic tile featuring a deep, rich blue glaze that brings a calming yet luxurious feel to any interior space. The smooth polished surface reflects light beautifully, creating a subtle shine that enhances both modern and classic settings. Engineered for durability and easy maintenance, this tile is ideal for kitchens, bathrooms, and living areas. Its versatile design allows it to be used as both a feature wall element and a stylish flooring solution, making it a perfect choice for homeowners seeking elegance with practicality.",
+        "image": "https://i.ibb.co.com/5g3LfqcB/ceramic.jpg",
+        "category": "ceramic",
+        "price": 45.99,
+        "currency": "USD",
+        "dimensions": "60x60 cm",
+        "material": "Ceramic",
+        "inStock": true,
+        "gallery": [
+            {
+                "title": "Close View",
+                "image": "https://i.ibb.co.com/1YcZBSv2/ceramic.png"
+            },
+            {
+                "title": "Wall Setup",
+                "image": "https://i.ibb.co.com/h0QDHgP/ceramic3.png"
+            },
+            {
+                "title": "Texture Detail",
+                "image": "https://i.ibb.co.com/5g3LfqcB/ceramic.jpg"
+            },
+            {
+                "title": "Room Style",
+                "image": "https://i.ibb.co.com/1YcZBSv2/ceramic.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_002",
+        "title": "Classic Marble White",
+        "description": "An elegant marble tile inspired by natural stone, featuring delicate vein patterns that add depth and sophistication to any space. Its bright white surface enhances natural lighting, making rooms feel more open and luxurious. Carefully crafted for both beauty and performance, this tile is suitable for high-end residential and commercial interiors. Whether used for flooring, walls, or statement areas, it delivers a timeless aesthetic that never goes out of style while maintaining durability and ease of care.",
+        "image": "https://i.ibb.co.com/xKQ5KwMT/stone.png",
+        "category": "marble",
+        "price": 89.99,
+        "currency": "USD",
+        "dimensions": "60x60 cm",
+        "material": "Marble",
+        "inStock": true,
+        "gallery": [
+            {
+                "title": "Polished Look",
+                "image": "https://i.ibb.co.com/cS3P2v1G/sand.png"
+            },
+            {
+                "title": "Floor Setup",
+                "image": "https://i.ibb.co.com/xKQ5KwMT/stone.png"
+            },
+            {
+                "title": "Close Texture",
+                "image": "https://i.ibb.co.com/cS3P2v1G/sand.png"
+            },
+            {
+                "title": "Luxury Interior",
+                "image": "https://i.ibb.co.com/xKQ5KwMT/stone.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_003",
+        "title": "Geometric Pattern Tile",
+        "description": "A bold and contemporary tile featuring striking geometric patterns that instantly elevate the visual appeal of any interior. Designed for creative expression, this tile is perfect for accent walls, backsplashes, and statement flooring. Its high-quality ceramic build ensures long-lasting performance while maintaining vibrant patterns and sharp details. Ideal for modern homes, cafes, and creative spaces, it adds a unique artistic touch that blends functionality with design innovation.",
+        "image": "https://i.ibb.co.com/yF51nwBZ/geometric2.png",
+        "category": "geometric",
+        "price": 55.00,
+        "currency": "USD",
+        "dimensions": "20x20 cm",
+        "material": "Ceramic",
+        "inStock": true,
+        "gallery": [
+            {
+                "title": "Pattern View",
+                "image": "https://i.ibb.co.com/10geometric.jpg"
+            },
+            {
+                "title": "Wall Design",
+                "image": "https://i.ibb.co.com/1tG3KjGm/geometric.png"
+            },
+            {
+                "title": "Close Shot",
+                "image": "https://i.ibb.co.com/yF51nwBZ/geometric2.png"
+            },
+            {
+                "title": "Interior Use",
+                "image": "https://i.ibb.co.com/n8K1YYL2/color.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_004",
+        "title": "Wood Finish Brown",
+        "description": "A beautifully designed wood-look tile that captures the natural grain and warmth of real wood while offering the durability and water resistance of porcelain. This tile is perfect for creating cozy, welcoming interiors without the maintenance challenges of real wood flooring. Its elongated plank design enhances spatial flow, making rooms appear larger and more refined. Ideal for living rooms, bedrooms, and commercial spaces, it seamlessly blends natural aesthetics with modern practicality.",
+        "image": "https://i.ibb.co.com/35jWVT5n/wood.jpg",
+        "category": "wood-finish",
+        "price": 65.5,
+        "currency": "USD",
+        "dimensions": "15x60 cm",
+        "material": "Porcelain",
+        "inStock": true,
+        "gallery": [
+            {
+                "title": "Wood Texture",
+                "image": "https://i.ibb.co.com/tppdLK7R/wood.png"
+            },
+            {
+                "title": "Floor Layout",
+                "image": "https://i.ibb.co.com/35jWVT5n/wood.jpg"
+            },
+            {
+                "title": "Close Detail",
+                "image": "https://i.ibb.co.com/tppdLK7R/wood.png"
+            },
+            {
+                "title": "Living Room",
+                "image": "https://i.ibb.co.com/35jWVT5n/wood.jpg"
+            }
+        ]
+    },
+    {
+        "id": "tile_005",
+        "title": "Glossy Black Tile",
+        "description": "A luxurious glossy black tile designed to create bold, dramatic interiors. Its mirror-like finish reflects light beautifully, adding depth and sophistication to any room. Perfect for modern and high-end spaces, this tile works exceptionally well in kitchens, bathrooms, and feature walls. The smooth surface is easy to clean and maintain, making it both a stylish and practical choice for contemporary living environments.",
+        "image": "https://i.ibb.co.com/XrxdZCtH/glossy.jpg",
+        "category": "glossy",
+        "price": 72.0,
+        "currency": "USD",
+        "dimensions": "30x60 cm",
+        "material": "Ceramic",
+        "inStock": true,
+        "gallery": [
+            {
+                "title": "Gloss Finish",
+                "image": "https://i.ibb.co.com/n8K1YYL2/color.png"
+            },
+            {
+                "title": "Wall Reflection",
+                "image": "https://i.ibb.co.com/XrxdZCtH/glossy.jpg"
+            },
+            {
+                "title": "Close Shine",
+                "image": "https://i.ibb.co.com/XrxdZCtH/glossy.jpg"
+            },
+            {
+                "title": "Modern Interior",
+                "image": "https://i.ibb.co.com/n8K1YYL2/color.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_006",
+        "title": "Matte Soft Grey",
+        "description": "A refined matte grey tile crafted for modern, minimal interiors where subtlety and elegance matter. Its soft, non-reflective surface diffuses light gently, creating a calm and sophisticated ambiance. Designed for durability and daily use, it resists stains and scratches while maintaining its smooth texture over time. Ideal for living rooms, bedrooms, and contemporary commercial spaces, this tile offers a perfect balance between aesthetic simplicity and long-lasting performance.",
+        "image": "https://i.ibb.co.com/F4Qvm3Qf/mate.jpg",
+        "category": "matte",
+        "price": 48.00,
+        "currency": "USD",
+        "dimensions": "30x30 cm",
+        "material": "Ceramic",
+        "inStock": true,
+        "tags": [
+            "grey",
+            "minimal",
+            "matte"
+        ],
+        "rating": 4.3,
+        "reviews": 88,
+        "gallery": [
+            {
+                "title": "Surface View",
+                "image": "https://i.ibb.co.com/605zqCqG/modern.png"
+            },
+            {
+                "title": "Room Setup",
+                "image": "https://i.ibb.co.com/8Lxq2Mhh/premium.png"
+            },
+            {
+                "title": "Close Texture",
+                "image": "https://i.ibb.co.com/F4Qvm3Qf/mate.jpg"
+            },
+            {
+                "title": "Interior Style",
+                "image": "https://i.ibb.co.com/605zqCqG/modern.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_007",
+        "title": "Mosaic Aqua Mix",
+        "description": "A vibrant mosaic tile featuring a dynamic blend of aqua and blue tones, designed to bring energy and artistic expression into any space. Each small tile piece reflects light differently, creating a lively and textured surface that enhances visual depth. Perfect for kitchen backsplashes, bathroom walls, or decorative accents, this mosaic tile combines durability with eye-catching design, making it a great choice for both residential and commercial interiors seeking a bold statement.",
+        "image": "https://i.ibb.co.com/8Dgwy68q/mosaic.jpg",
+        "category": "mosaic",
+        "price": 59.99,
+        "currency": "USD",
+        "dimensions": "10x10 cm",
+        "material": "Glass",
+        "inStock": true,
+        "tags": [
+            "mosaic",
+            "colorful",
+            "aqua"
+        ],
+        "rating": 4.6,
+        "reviews": 120,
+        "gallery": [
+            {
+                "title": "Pattern Mix",
+                "image": "https://i.ibb.co.com/8Dgwy68q/mosaic.jpg"
+            },
+            {
+                "title": "Wall Setup",
+                "image": "https://i.ibb.co.com/9H8WgQcn/marvel2.png"
+            },
+            {
+                "title": "Close Detail",
+                "image": "https://i.ibb.co.com/v6HFrsF3/marvel1.png"
+            },
+            {
+                "title": "Kitchen Use",
+                "image": "https://i.ibb.co.com/jkVgNMQq/marvel.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_008",
+        "title": "Stone Natural Beige",
+        "description": "Inspired by natural stone textures, this beige tile offers an earthy and grounded aesthetic that complements both indoor and outdoor environments. Its subtle variations in tone create a realistic stone-like appearance, adding warmth and authenticity to any space. Built for strength and durability, it withstands heavy foot traffic while maintaining its natural charm. Ideal for patios, living areas, and rustic-style interiors, this tile blends timeless beauty with modern resilience.",
+        "image": "https://i.ibb.co.com/mF662ypZ/heritage.png",
+        "category": "stone",
+        "price": 68.00,
+        "currency": "USD",
+        "dimensions": "40x40 cm",
+        "material": "Stone",
+        "inStock": true,
+        "tags": [
+            "stone",
+            "natural",
+            "beige"
+        ],
+        "rating": 4.5,
+        "reviews": 132,
+        "gallery": [
+            {
+                "title": "Natural Texture",
+                "image": "https://i.ibb.co.com/mF662ypZ/heritage.png"
+            },
+            {
+                "title": "Outdoor Use",
+                "image": "https://i.ibb.co.com/GvPwsF1g/glow.png"
+            },
+            {
+                "title": "Close View",
+                "image": "https://i.ibb.co.com/mF662ypZ/heritage.png"
+            },
+            {
+                "title": "Living Space",
+                "image": "https://i.ibb.co.com/nswGKSMK/hero-banner.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_009",
+        "title": "Ceramic Sand Beige",
+        "description": "A soft and versatile ceramic tile featuring warm sand-beige tones that seamlessly blend into a wide range of interior styles. Its smooth finish enhances natural lighting, making spaces feel more open and inviting. Designed for durability and easy maintenance, this tile is ideal for both walls and floors in kitchens, living rooms, and hallways. Its neutral palette allows it to pair effortlessly with modern, minimalist, or classic décor themes.",
+        "image": "https://i.ibb.co.com/605zqCqG/modern.png",
+        "category": "ceramic",
+        "price": 44.50,
+        "currency": "USD",
+        "dimensions": "60x60 cm",
+        "material": "Ceramic",
+        "inStock": true,
+        "tags": [
+            "neutral",
+            "beige",
+            "modern"
+        ],
+        "rating": 4.4,
+        "reviews": 101,
+        "gallery": [
+            {
+                "title": "Soft Finish",
+                "image": "https://i.ibb.co.com/605zqCqG/modern.png"
+            },
+            {
+                "title": "Room Setup",
+                "image": "https://i.ibb.co.com/8Lxq2Mhh/premium.png"
+            },
+            {
+                "title": "Close Detail",
+                "image": "https://i.ibb.co.com/B2dtFgL5/porcelain.png"
+            },
+            {
+                "title": "Interior Look",
+                "image": "https://i.ibb.co.com/HmKcR05/porcelain1.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_010",
+        "title": "Marble Grey Vein",
+        "description": "A contemporary marble tile showcasing elegant grey veining across a smooth, polished surface, creating a refined and luxurious look. The subtle contrast in tones adds depth and character while maintaining a clean and modern aesthetic. Perfect for high-end interiors, this tile enhances both residential and commercial spaces with its timeless appeal. Its durable construction ensures long-lasting performance while preserving its premium finish.",
+        "image": "https://i.ibb.co.com/ksCpVQsB/marvel.jpg",
+        "category": "marble",
+        "price": 92.00,
+        "currency": "USD",
+        "dimensions": "60x60 cm",
+        "material": "Marble",
+        "inStock": true,
+        "tags": [
+            "marble",
+            "grey",
+            "luxury"
+        ],
+        "rating": 4.7,
+        "reviews": 189,
+        "gallery": [
+            {
+                "title": "Vein Detail",
+                "image": "https://i.ibb.co.com/ksCpVQsB/marvel.jpg"
+            },
+            {
+                "title": "Floor Setup",
+                "image": "https://i.ibb.co.com/jkVgNMQq/marvel.png"
+            },
+            {
+                "title": "Close Texture",
+                "image": "https://i.ibb.co.com/v6HFrsF3/marvel1.png"
+            },
+            {
+                "title": "Modern Room",
+                "image": "https://i.ibb.co.com/9H8WgQcn/marvel2.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_011",
+        "title": "Geometric Black & White",
+        "description": "A striking geometric tile designed with contrasting black and white patterns to create a bold visual impact. Perfect for feature walls, entryways, and statement floors, this tile adds a sense of rhythm and modern artistry to interiors. Its durable ceramic construction ensures long-lasting performance, while the timeless color combination allows it to blend seamlessly with both contemporary and classic design styles.",
+        "image": "https://i.ibb.co.com/W4dS5rCc/geometric.jpg",
+        "category": "geometric",
+        "price": 57.0,
+        "currency": "USD",
+        "dimensions": "20x20 cm",
+        "material": "Ceramic",
+        "inStock": true,
+        "tags": [
+            "geometric",
+            "black-white",
+            "bold"
+        ],
+        "rating": 4.5,
+        "reviews": 134,
+        "gallery": [
+            {
+                "title": "Pattern Design",
+                "image": "https://i.ibb.co.com/1tG3KjGm/geometric.png"
+            },
+            {
+                "title": "Wall Layout",
+                "image": "https://i.ibb.co.com/yF51nwBZ/geometric2.png"
+            },
+            {
+                "title": "Close Detail",
+                "image": "https://i.ibb.co.com/n8K1YYL2/color.png"
+            },
+            {
+                "title": "Interior View",
+                "image": "https://i.ibb.co.com/cS3P2v1G/sand.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_012",
+        "title": "Walnut Wood Finish",
+        "description": "A premium wood-look tile inspired by rich walnut textures, offering the warmth of natural wood with the strength of porcelain. Its detailed grain pattern and deep tones create a cozy and sophisticated atmosphere, ideal for living rooms, bedrooms, and office spaces. Resistant to moisture and wear, this tile provides the beauty of hardwood without the maintenance challenges.",
+        "image": "https://i.ibb.co.com/35jWVT5n/wood.jpg",
+        "category": "wood-finish",
+        "price": 66.5,
+        "currency": "USD",
+        "dimensions": "15x60 cm",
+        "material": "Porcelain",
+        "inStock": true,
+        "tags": [
+            "wood",
+            "warm",
+            "natural"
+        ],
+        "rating": 4.7,
+        "reviews": 152,
+        "gallery": [
+            {
+                "title": "Wood Texture",
+                "image": "https://i.ibb.co.com/tppdLK7R/wood.png"
+            },
+            {
+                "title": "Floor Setup",
+                "image": "https://i.ibb.co.com/mF662ypZ/heritage.png"
+            },
+            {
+                "title": "Close View",
+                "image": "https://i.ibb.co.com/GvPwsF1g/glow.png"
+            },
+            {
+                "title": "Living Space",
+                "image": "https://i.ibb.co.com/xKQ5KwMT/stone.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_013",
+        "title": "Glossy Pearl White",
+        "description": "A refined glossy white tile with a pearl-like finish that enhances brightness and creates a clean, luxurious look. Its reflective surface adds depth and elegance, making it ideal for kitchens, bathrooms, and modern living spaces. Designed for easy cleaning and long-term durability.",
+        "image": "https://i.ibb.co.com/XrxdZCtH/glossy.jpg",
+        "category": "glossy",
+        "price": 70.0,
+        "currency": "USD",
+        "dimensions": "30x60 cm",
+        "material": "Ceramic",
+        "inStock": true,
+        "tags": [
+            "white",
+            "glossy",
+            "clean"
+        ],
+        "rating": 4.6,
+        "reviews": 175,
+        "gallery": [
+            {
+                "title": "Gloss Finish",
+                "image": "https://i.ibb.co.com/5g3LfqcB/ceramic.jpg"
+            },
+            {
+                "title": "Wall Reflection",
+                "image": "https://i.ibb.co.com/1YcZBSv2/ceramic.png"
+            },
+            {
+                "title": "Close Detail",
+                "image": "https://i.ibb.co.com/h0QDHgP/ceramic3.png"
+            },
+            {
+                "title": "Modern Kitchen",
+                "image": "https://i.ibb.co.com/nswGKSMK/hero-banner.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_014",
+        "title": "Matte Concrete Grey",
+        "description": "A contemporary matte tile inspired by industrial concrete textures, offering a raw yet refined aesthetic. Its muted grey tone provides a versatile foundation for modern interiors, blending seamlessly with minimalist and urban design styles.",
+        "image": "https://i.ibb.co.com/605zqCqG/modern.png",
+        "category": "matte",
+        "price": 50.0,
+        "currency": "USD",
+        "dimensions": "30x30 cm",
+        "material": "Ceramic",
+        "inStock": true,
+        "tags": [
+            "concrete",
+            "modern",
+            "industrial"
+        ],
+        "rating": 4.4,
+        "reviews": 98,
+        "gallery": [
+            {
+                "title": "Concrete Texture",
+                "image": "https://i.ibb.co.com/8Lxq2Mhh/premium.png"
+            },
+            {
+                "title": "Room Setup",
+                "image": "https://i.ibb.co.com/B2dtFgL5/porcelain.png"
+            },
+            {
+                "title": "Close Detail",
+                "image": "https://i.ibb.co.com/HmKcR05/porcelain1.png"
+            },
+            {
+                "title": "Urban Interior",
+                "image": "https://i.ibb.co.com/ksCpVQsB/marvel.jpg"
+            }
+        ]
+    },
+    {
+        "id": "tile_015",
+        "title": "Mosaic Gold Accent",
+        "description": "A luxurious mosaic tile featuring subtle gold accents that add a touch of glamour and sophistication to any space. Designed to catch light and create a shimmering effect, it is perfect for decorative walls, backsplashes, and feature areas.",
+        "image": "https://i.ibb.co.com/8Dgwy68q/mosaic.jpg",
+        "category": "mosaic",
+        "price": 62.0,
+        "currency": "USD",
+        "dimensions": "10x10 cm",
+        "material": "Glass",
+        "inStock": true,
+        "tags": [
+            "mosaic",
+            "gold",
+            "luxury"
+        ],
+        "rating": 4.8,
+        "reviews": 140,
+        "gallery": [
+            {
+                "title": "Gold Detail",
+                "image": "https://i.ibb.co.com/jkVgNMQq/marvel.png"
+            },
+            {
+                "title": "Wall Accent",
+                "image": "https://i.ibb.co.com/v6HFrsF3/marvel1.png"
+            },
+            {
+                "title": "Close Shine",
+                "image": "https://i.ibb.co.com/9H8WgQcn/marvel2.png"
+            },
+            {
+                "title": "Luxury Interior",
+                "image": "https://i.ibb.co.com/GvPwsF1g/glow.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_016",
+        "title": "Stone Rustic Grey",
+        "description": "A rugged stone-inspired tile featuring rich grey tones and natural texture variations that bring an authentic, earthy feel to any space. Designed to replicate the raw beauty of natural stone, this tile is ideal for both indoor and outdoor applications. Its durable surface withstands heavy use while maintaining its timeless charm, making it perfect for patios, hallways, and rustic-modern interiors.",
+        "image": "https://i.ibb.co.com/xKQ5KwMT/stone.png",
+        "category": "stone",
+        "price": 69.5,
+        "currency": "USD",
+        "dimensions": "40x40 cm",
+        "material": "Stone",
+        "inStock": true,
+        "tags": [
+            "stone",
+            "rustic",
+            "grey"
+        ],
+        "rating": 4.5,
+        "reviews": 122,
+        "gallery": [
+            {
+                "title": "Natural Texture",
+                "image": "https://i.ibb.co.com/mF662ypZ/heritage.png"
+            },
+            {
+                "title": "Outdoor Setup",
+                "image": "https://i.ibb.co.com/nswGKSMK/hero-banner.png"
+            },
+            {
+                "title": "Close Detail",
+                "image": "https://i.ibb.co.com/GvPwsF1g/glow.png"
+            },
+            {
+                "title": "Patio View",
+                "image": "https://i.ibb.co.com/cS3P2v1G/sand.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_017",
+        "title": "Ceramic Ivory Shine",
+        "description": "A soft ivory ceramic tile with a subtle sheen that enhances light and creates a warm, inviting atmosphere. Its smooth surface and neutral tone make it highly versatile, fitting effortlessly into both modern and traditional interiors. Built for durability and easy maintenance, this tile is ideal for living spaces, kitchens, and hallways where elegance meets everyday functionality.",
+        "image": "https://i.ibb.co.com/5g3LfqcB/ceramic.jpg",
+        "category": "ceramic",
+        "price": 46.0,
+        "currency": "USD",
+        "dimensions": "60x60 cm",
+        "material": "Ceramic",
+        "inStock": true,
+        "tags": [
+            "ivory",
+            "soft",
+            "elegant"
+        ],
+        "rating": 4.4,
+        "reviews": 110,
+        "gallery": [
+            {
+                "title": "Smooth Finish",
+                "image": "https://i.ibb.co.com/1YcZBSv2/ceramic.png"
+            },
+            {
+                "title": "Room Setup",
+                "image": "https://i.ibb.co.com/h0QDHgP/ceramic3.png"
+            },
+            {
+                "title": "Close Texture",
+                "image": "https://i.ibb.co.com/B2dtFgL5/porcelain.png"
+            },
+            {
+                "title": "Interior Style",
+                "image": "https://i.ibb.co.com/HmKcR05/porcelain1.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_018",
+        "title": "Marble Gold Vein",
+        "description": "A premium marble tile featuring elegant gold veining across a smooth white surface, creating a luxurious and eye-catching design. Perfect for upscale interiors, this tile adds a sense of grandeur and refinement to floors and walls alike. Its polished finish enhances light reflection, while its strong construction ensures durability and long-term beauty.",
+        "image": "https://i.ibb.co.com/ksCpVQsB/marvel.jpg",
+        "category": "marble",
+        "price": 105.0,
+        "currency": "USD",
+        "dimensions": "60x60 cm",
+        "material": "Marble",
+        "inStock": true,
+        "tags": [
+            "marble",
+            "gold",
+            "luxury"
+        ],
+        "rating": 4.9,
+        "reviews": 210,
+        "gallery": [
+            {
+                "title": "Gold Vein Detail",
+                "image": "https://i.ibb.co.com/jkVgNMQq/marvel.png"
+            },
+            {
+                "title": "Luxury Floor",
+                "image": "https://i.ibb.co.com/v6HFrsF3/marvel1.png"
+            },
+            {
+                "title": "Close Texture",
+                "image": "https://i.ibb.co.com/9H8WgQcn/marvel2.png"
+            },
+            {
+                "title": "Elegant Interior",
+                "image": "https://i.ibb.co.com/XrxdZCtH/glossy.jpg"
+            }
+        ]
+    },
+    {
+        "id": "tile_019",
+        "title": "Geometric Triangle Mix",
+        "description": "A creative geometric tile featuring triangle patterns in a balanced mix of tones, designed to add movement and visual interest to interiors. Ideal for feature walls, artistic floors, and modern spaces, this tile blends bold design with durable construction.",
+        "image": "https://i.ibb.co.com/W4dS5rCc/geometric.jpg",
+        "category": "geometric",
+        "price": 59.0,
+        "currency": "USD",
+        "dimensions": "20x20 cm",
+        "material": "Ceramic",
+        "inStock": true,
+        "tags": [
+            "geometric",
+            "pattern",
+            "creative"
+        ],
+        "rating": 4.6,
+        "reviews": 145,
+        "gallery": [
+            {
+                "title": "Pattern Layout",
+                "image": "https://i.ibb.co.com/1tG3KjGm/geometric.png"
+            },
+            {
+                "title": "Wall Design",
+                "image": "https://i.ibb.co.com/yF51nwBZ/geometric2.png"
+            },
+            {
+                "title": "Close Detail",
+                "image": "https://i.ibb.co.com/n8K1YYL2/color.png"
+            },
+            {
+                "title": "Interior View",
+                "image": "https://i.ibb.co.com/dsFTc2VT/tile3.png"
+            }
+        ]
+    },
+    {
+        "id": "tile_020",
+        "title": "Oak Light Wood Finish",
+        "description": "A light oak wood-look tile that brings brightness and natural warmth into interior spaces. Its realistic grain pattern mimics real wood while offering the durability and moisture resistance of porcelain. Ideal for Scandinavian-style interiors.",
+        "image": "https://i.ibb.co.com/35jWVT5n/wood.jpg",
+        "category": "wood-finish",
+        "price": 67.0,
+        "currency": "USD",
+        "dimensions": "15x60 cm",
+        "material": "Porcelain",
+        "inStock": true,
+        "tags": [
+            "wood",
+            "light",
+            "natural"
+        ],
+        "rating": 4.7,
+        "reviews": 158,
+        "gallery": [
+            {
+                "title": "Wood Grain",
+                "image": "https://i.ibb.co.com/tppdLK7R/wood.png"
+            },
+            {
+                "title": "Floor Setup",
+                "image": "https://i.ibb.co.com/605zqCqG/modern.png"
+            },
+            {
+                "title": "Close View",
+                "image": "https://i.ibb.co.com/8Lxq2Mhh/premium.png"
+            },
+            {
+                "title": "Scandinavian Room",
+                "image": "https://i.ibb.co.com/nswGKSMK/hero-banner.png"
+            }
+        ]
+    }
+]
