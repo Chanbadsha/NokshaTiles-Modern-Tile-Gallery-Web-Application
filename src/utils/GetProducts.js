@@ -1,8 +1,6 @@
 const GetProducts = async () => {
   try {
-    const res = await fetch(
-      "https://nakshatiles-json-server.onrender.com/products",
-    );
+    const res = await fetch(`${process.env.DATABASE_URI}/products`);
 
     if (!res.ok) {
       throw new Error("Failed to fetch products");

@@ -1,8 +1,6 @@
 const GetCategory = async () => {
   try {
-    const res = await fetch(
-      "https://nakshatiles-json-server.onrender.com/categories",
-    );
+    const res = await fetch(`${process.env.DATABASE_URI}/categories`);
 
     if (!res.ok) {
       throw new Error("Failed to fetch category");
