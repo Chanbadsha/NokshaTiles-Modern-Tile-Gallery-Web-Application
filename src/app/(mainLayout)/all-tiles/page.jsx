@@ -52,15 +52,15 @@ const ALlTilesPage = async ({ searchParams }) => {
         </div>
 
         {/* GRID */}
-        <div className="grid mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filterTiles.length > 0 ? (
-            filterTiles.map((tilesInfo, ind) => (
+        {filterTiles.length > 0 ? (
+          <div className="grid mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {filterTiles.map((tilesInfo, ind) => (
               <TilesCard key={ind} tilesInfo={tilesInfo} />
-            ))
-          ) : (
-            <NoDataUi />
-          )}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <NoDataUi />
+        )}
       </div>
     </div>
   );

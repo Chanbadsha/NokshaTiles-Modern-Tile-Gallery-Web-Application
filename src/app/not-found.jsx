@@ -40,7 +40,7 @@ const NotFound = () => {
               transition-all duration-300
             "
           >
-            Browse Tiles
+            Home
             <FaArrowRightLong />
           </Link>
 
