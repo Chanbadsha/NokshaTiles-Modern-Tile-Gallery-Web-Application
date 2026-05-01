@@ -1,10 +1,13 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
 import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
 import { Button, Input, InputGroup, Label, TextField } from "@heroui/react";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import { FaGithub, FaGoogle } from "react-icons/fa6";
 
 const SignUpPage = () => {
@@ -15,7 +18,21 @@ const SignUpPage = () => {
   } = useForm();
   const [isVisible, setIsVisible] = useState(false);
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (formData) => {
+    const { data, error } = await authClient.signUp.email({
+      ...formData,
+      callbackURL: "/",
+    });
+    if (data?.token) {
+      toast.success("User Created Successfully");
+      redirect("/");
+    }
+    if (error) {
+      toast.success(`${error?.message}`);
+    }
+
+    console.log(data, error);
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-[#edf2fc] to-white px-4">
@@ -44,8 +61,8 @@ const SignUpPage = () => {
               className="focus:ring-2 focus:ring-blue-400"
             />
 
-            {errors.email && (
-              <span className="text-xs text-red-500">Email is required</span>
+            {errors.name && (
+              <span className="text-xs text-red-500">Name is required</span>
             )}
           </div>
           {/* EMAIL */}
@@ -66,7 +83,6 @@ const SignUpPage = () => {
           {/* PASSWORD */}
           <div className="flex flex-col gap-1">
             <Label>Password</Label>
-
             <InputGroup>
               <InputGroup.Input
                 {...register("password", { required: true })}

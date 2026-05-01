@@ -19,7 +19,7 @@ const LoginPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-[#edf2fc] to-white px-4">
+    <div className="min-h-screen flex  items-center justify-center bg-linear-to-br from-[#edf2fc] to-white px-4">
       <div className="w-full max-w-xl bg-white shadow-xl rounded-2xl p-8 lg:p-10 lg:py-14">
         {/* HEADER */}
         <div className="text-center mb-8 space-y-3">
