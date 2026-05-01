@@ -25,8 +25,8 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="mt-6 lg:mt-8 flex flex-wrap gap-3 justify-center lg:justify-start">
-            <Link href="/">
-              <Button className="flex items-center gap-2 lg:p-6 p-4 text-base lg:text-lg font-semibold rounded-xl bg-gradient-to-r from-[#004395] to-[#3B82F6] hover:from-[#3B82F6] hover:to-[#004395] transition-all duration-300 hover:-translate-y-1 shadow-md hover:shadow-lg">
+            <Link href="/all-tiles">
+              <Button className="flex items-center gap-2 lg:p-6 p-4 text-base lg:text-lg font-semibold rounded-xl bg-linear-to-r from-[#004395] to-[#3B82F6] hover:from-[#3B82F6] hover:to-[#004395] transition-all duration-300 hover:-translate-y-1 shadow-md hover:shadow-lg">
                 Browse Tiles
                 <FaArrowRightLong className="text-sm" />
               </Button>

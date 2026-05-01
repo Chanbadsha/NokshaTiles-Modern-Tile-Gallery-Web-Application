@@ -143,10 +143,17 @@ const SignUpPage = () => {
           <div className="flex gap-3 pt-2">
             <Button
               type="submit"
-              className="w-full bg-linear-to-r from-[#004395] to-[#3B82F6] text-white font-medium rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              disabled={loading}
+              className="
+    w-full
+    bg-linear-to-r from-[#004395] to-[#3B82F6]
+    text-white font-medium rounded-xl
+    transition-all duration-300
+    hover:shadow-lg hover:-translate-y-1
+    disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0
+  "
             >
-              <Check />
-              Submit
+              {loading ? "Signing up..." : "Sign up"}
             </Button>
 
             <Button

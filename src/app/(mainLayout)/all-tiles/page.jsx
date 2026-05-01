@@ -1,10 +1,14 @@
 import TilesCard from "@/components/Shared/TilesCard";
 import { Button, InputGroup } from "@heroui/react";
 import { SlMagnifier } from "react-icons/sl";
-import Categories from "@/../public/categories.json";
-import allTilesInfo from "@/../public/tiles.json";
 
-const ALlTilesPage = () => {
+import GetProducts from "@/utils/GetProducts";
+import GetCategory from "@/utils/GetCategory";
+
+const ALlTilesPage = async () => {
+  const allTilesInfo = await GetProducts();
+  const Categories = await GetCategory();
+
   return (
     <div className="bg-[#f9f9ff] py-10 lg:py-16">
       <div className="container mx-auto px-4">
