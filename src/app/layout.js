@@ -1,6 +1,7 @@
 import { Epilogue, Geist, Geist_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/next";
 
 const manrope = Manrope({
   variable: "--font-man",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Toaster toastOptions={{ style: { textAlign: "left" } }} />
+        <Analytics />
         {children}
       </body>
     </html>
