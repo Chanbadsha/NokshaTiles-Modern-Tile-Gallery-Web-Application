@@ -1,23 +1,30 @@
 "use client";
+
 import { Button } from "@heroui/react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const CategoryFilter = ({ category }) => {
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const handleSearch = () => {
     const value = category.category.toLowerCase();
-    router.push(`?tiles=${value}`);
+
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("tiles", value);
+
+    router.push(`?${params.toString()}`);
   };
+
   return (
     <Button
       onClick={handleSearch}
       className="
-                    shrink-0 px-4 py-2 rounded-full text-sm md:text-base
-                    border border-gray-200 bg-white text-gray-700
-                    hover:bg-[#3B82F6] hover:text-white hover:border-[#3B82F6]
-                    transition-all duration-300
-                  "
+        shrink-0 px-4 py-2 rounded-full text-sm md:text-base
+        border border-gray-200 bg-white text-gray-700
+        hover:bg-[#3B82F6] hover:text-white hover:border-[#3B82F6]
+        transition-all duration-300
+      "
     >
       {category.category}
     </Button>
