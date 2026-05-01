@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       className={`${manrope.variable} ${epilogue.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Toaster />
+        <Toaster toastOptions={{ style: { textAlign: "left" } }} />
         {children}
       </body>
     </html>

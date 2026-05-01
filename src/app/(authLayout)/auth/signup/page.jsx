@@ -18,20 +18,32 @@ const SignUpPage = () => {
   } = useForm();
   const [isVisible, setIsVisible] = useState(false);
 
-  const onSubmit = async (formData) => {
-    const { data, error } = await authClient.signUp.email({
-      ...formData,
-      callbackURL: "/",
-    });
-    if (data?.token) {
-      toast.success("User Created Successfully");
-      redirect("/");
-    }
-    if (error) {
-      toast.success(`${error?.message}`);
-    }
+  const [loading, setLoading] = useState(false);
 
-    console.log(data, error);
+  const onSubmit = async (formData) => {
+    setLoading(true);
+    try {
+      const { data, error } = await authClient.signUp.email({
+        ...formData,
+        rememberMe: true,
+        callbackURL: "/",
+      });
+
+      if (error) {
+        toast(error?.message || "Signup failed ❌", {
+          icon: "❌",
+        });
+      } else {
+        toast.success("Welcome to NakshaTiles! 🎉 Your account is ready.");
+        redirect("/");
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSocialLogin = async () => {
+    const data = await authClient.signIn.social({ provider: "google" });
   };
 
   return (
@@ -158,6 +170,7 @@ const SignUpPage = () => {
         <div className="flex w-full flex-col gap-3">
           {/* Google */}
           <Button
+            onClick={handleSocialLogin}
             className="
       w-full flex items-center justify-center gap-2
       border border-gray-300 bg-white text-gray-700
