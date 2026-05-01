@@ -1,10 +1,19 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
 import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
-import { Button, Input, InputGroup, Label, TextField } from "@heroui/react";
+import {
+  Button,
+  Input,
+  InputGroup,
+  Label,
+  Spinner,
+  TextField,
+} from "@heroui/react";
 import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import { FaGithub, FaGoogle } from "react-icons/fa6";
 
 const LoginPage = () => {
@@ -14,7 +23,28 @@ const LoginPage = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const [loading, setLoading] = useState(false);
+
+  const onSubmit = async (formData) => {
+    setLoading(true);
+    try {
+      const { data, error } = await authClient.signIn.email({
+        ...formData,
+        rememberMe: true,
+        callbackURL: "/",
+      });
+
+      if (error) {
+        toast(error?.message || "Something went wrong ❌", {
+          icon: "❌",
+        });
+      } else {
+        toast.success("Welcome back! 🎉");
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -54,12 +84,6 @@ const LoginPage = () => {
           <div className="flex flex-col gap-1">
             <Label>Password</Label>
 
-            {/* <Input
-              type="password"
-              placeholder="Enter your password"
-              className="focus:ring-2 focus:ring-blue-400"
-            /> */}
-
             <InputGroup>
               <InputGroup.Input
                 {...register("password", { required: true })}
@@ -93,10 +117,17 @@ const LoginPage = () => {
           <div className="flex gap-3 pt-2">
             <Button
               type="submit"
-              className="w-full bg-linear-to-r from-[#004395] to-[#3B82F6] text-white font-medium rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              disabled={loading}
+              className="
+    w-full
+    bg-linear-to-r from-[#004395] to-[#3B82F6]
+    text-white font-medium rounded-xl
+    transition-all duration-300
+    hover:shadow-lg hover:-translate-y-1
+    disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0
+  "
             >
-              <Check />
-              Submit
+              {loading ? "Signing in..." : "Sign in"}
             </Button>
 
             <Button
