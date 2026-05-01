@@ -24,6 +24,7 @@ const LoginPage = () => {
   } = useForm();
 
   const [loading, setLoading] = useState(false);
+  const [loadingProvider, setLoadingProvider] = useState(null);
 
   const onSubmit = async (formData) => {
     setLoading(true);
@@ -43,6 +44,22 @@ const LoginPage = () => {
       }
     } finally {
       setLoading(false);
+    }
+  };
+  const handleSocialLogin = async (provider) => {
+    try {
+      setLoadingProvider(provider);
+
+      await authClient.signIn.social({
+        provider,
+      });
+    } catch (error) {
+      toast(error?.message || "Signup failed ❌", {
+        icon: "❌",
+      });
+      console.error(error);
+    } finally {
+      setLoadingProvider(null);
     }
   };
 
@@ -157,31 +174,45 @@ const LoginPage = () => {
           <div className="flex w-full flex-col gap-3">
             {/* Google */}
             <Button
+              onClick={() => handleSocialLogin("google")}
+              disabled={loadingProvider === "google"}
               className="
-                w-full flex items-center justify-center gap-2
-                border border-gray-300 bg-white text-gray-700
-                rounded-xl
-                transition-all duration-300
-                hover:bg-blue-50 hover:border-blue-400 hover:text-blue-600
-                hover:-translate-y-0.5
-              "
+    w-full flex items-center justify-center gap-2
+    border border-gray-300 bg-white text-gray-700
+    rounded-xl
+    transition-all duration-300
+    hover:bg-blue-50 hover:border-blue-400 hover:text-blue-600
+    hover:-translate-y-0.5
+    disabled:opacity-60 disabled:cursor-not-allowed
+  "
             >
-              <FaGoogle className="text-lg text-blue-500" />
+              {loadingProvider === "google" ? (
+                <span className="animate-spin border-2 border-blue-500 border-t-transparent rounded-full w-4 h-4" />
+              ) : (
+                <FaGoogle className="text-lg text-blue-500" />
+              )}
               Continue with Google
             </Button>
 
             {/* GitHub */}
             <Button
+              onClick={() => handleSocialLogin("github")}
+              disabled={loadingProvider === "github"}
               className="
-                w-full flex items-center justify-center gap-2
-                border border-gray-300 bg-white text-gray-700
-                rounded-xl
-                transition-all duration-300
-                hover:bg-gray-900 hover:border-gray-900 hover:text-white
-                hover:-translate-y-0.5
-              "
+    w-full flex items-center justify-center gap-2
+    border border-gray-300 bg-white text-gray-700
+    rounded-xl
+    transition-all duration-300
+    hover:bg-gray-900 hover:border-gray-900 hover:text-white
+    hover:-translate-y-0.5
+    disabled:opacity-60 disabled:cursor-not-allowed
+  "
             >
-              <FaGithub className="text-lg text-gray-800 group-hover:text-white" />
+              {loadingProvider === "github" ? (
+                <span className="animate-spin border-2 border-gray-900 border-t-transparent rounded-full w-4 h-4" />
+              ) : (
+                <FaGithub className="text-lg text-gray-800" />
+              )}
               Continue with GitHub
             </Button>
           </div>

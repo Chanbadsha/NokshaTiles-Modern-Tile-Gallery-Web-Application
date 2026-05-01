@@ -5,8 +5,17 @@ import Link from "next/link";
 import { useState } from "react";
 import logo from "@/../public/logo.png";
 import NavLinks from "@/utils/NavLinks";
+import { authClient } from "@/lib/auth-client";
 
 const NavBar = () => {
+  const {
+    data: session,
+    isPending, //loading state
+    error, //error object
+    refetch, //refetch the session
+  } = authClient.useSession();
+  const user = session?.user;
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [
     {
@@ -60,8 +69,6 @@ const NavBar = () => {
           <Link href={"/"} className="flex items-center gap-1">
             <Image
               src={logo}
-              height={40}
-              width={40}
               alt="NakshaTiles Logo"
               className="lg:w-10 h-auto hidden md:flex"
             ></Image>{" "}
@@ -77,10 +84,37 @@ const NavBar = () => {
             </li>
           ))}
         </ul>
-        <div className="flex items-center gap-4 ">
-          <Link href={"/auth/signin"}>
-            <Button className="text-white">Sign In</Button>
-          </Link>
+        {/* Right side */}
+        <div className="flex items-center gap-4">
+          {user ? (
+            <Link href="/dashboard">
+              <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-gray-200 hover:ring-[#3B82F6] transition duration-300 shadow-sm hover:shadow-md">
+                <Image
+                  src={user.image || "/default-avatar.png"}
+                  alt={user.name || "User"}
+                  fill
+                  className="object-cover"
+                />
+
+                {/* Online indicator */}
+                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-white"></span>
+              </div>
+            </Link>
+          ) : (
+            <Link href="/auth/signin">
+              <Button
+                className="
+          px-5 py-2 rounded-lg font-medium
+          bg-gradient-to-r from-[#3B82F6] to-[#2563eb]
+          text-white shadow-sm
+          hover:shadow-md hover:scale-[1.02]
+          transition-all duration-300
+        "
+              >
+                Sign In
+              </Button>
+            </Link>
+          )}
         </div>
       </header>
       {isMenuOpen && (

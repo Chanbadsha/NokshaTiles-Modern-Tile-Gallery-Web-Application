@@ -1,4 +1,4 @@
-const Loading = () => {
+const Loadings = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-[#edf2fc] via-white to-[#f8faff]">
       <div className="flex flex-col items-center gap-6">
@@ -17,4 +17,4 @@ const Loading = () => {
   );
 };
 
-export default Loading;
+export default Loadings;

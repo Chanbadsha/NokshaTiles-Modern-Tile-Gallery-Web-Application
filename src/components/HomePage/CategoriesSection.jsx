@@ -21,7 +21,7 @@ const CategoriesSection = () => {
 
           {/* CTA */}
           <Link
-            href="/"
+            href="/all-tiles"
             className="inline-flex justify-end items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition-all group"
           >
             View All

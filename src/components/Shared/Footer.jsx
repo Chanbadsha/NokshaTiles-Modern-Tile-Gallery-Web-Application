@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Footer = () => {
+const Footer = async () => {
   return (
     <footer className="bg-[#edf2fc] text-gray-700 mt-20 border-t">
       <div className="container mx-auto px-6 py-12">
