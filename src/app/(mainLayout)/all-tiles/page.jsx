@@ -15,7 +15,6 @@ const ALlTilesPage = async ({ searchParams }) => {
 
   const { tiles } = await searchParams;
   const filterTiles = SearchTiles(tiles, allTilesInfo) || allTilesInfo;
-  console.log(filterTiles);
 
   return (
     <div className="bg-[#f9f9ff] py-10 lg:py-16">
