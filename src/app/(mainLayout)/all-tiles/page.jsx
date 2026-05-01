@@ -4,10 +4,18 @@ import { SlMagnifier } from "react-icons/sl";
 
 import GetProducts from "@/utils/GetProducts";
 import GetCategory from "@/utils/GetCategory";
+import SearchTiles from "@/lib/SearchTiles";
+import SearchBox from "@/utils/SearchBox";
+import NoDataUi from "@/components/Shared/NoDataUi";
+import CategoryFilter from "@/utils/CategoryFilter";
 
-const ALlTilesPage = async () => {
+const ALlTilesPage = async ({ searchParams }) => {
   const allTilesInfo = await GetProducts();
   const Categories = await GetCategory();
+
+  const { tiles } = await searchParams;
+  const filterTiles = SearchTiles(tiles, allTilesInfo) || allTilesInfo;
+  console.log(filterTiles);
 
   return (
     <div className="bg-[#f9f9ff] py-10 lg:py-16">
@@ -32,27 +40,13 @@ const ALlTilesPage = async () => {
               <InputGroup.Prefix>
                 <SlMagnifier className="size-5 text-gray-500" />
               </InputGroup.Prefix>
-
-              <InputGroup.Input
-                className="w-full text-base md:text-lg bg-transparent outline-none px-2"
-                placeholder="Search tiles by name..."
-              />
+              <SearchBox />
             </InputGroup>
 
             {/* FILTER */}
             <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-2">
               {Categories.map((category, ind) => (
-                <Button
-                  key={ind}
-                  className="
-                    shrink-0 px-4 py-2 rounded-full text-sm md:text-base
-                    border border-gray-200 bg-white text-gray-700
-                    hover:bg-[#3B82F6] hover:text-white hover:border-[#3B82F6]
-                    transition-all duration-300
-                  "
-                >
-                  {category.category}
-                </Button>
+                <CategoryFilter key={ind} category={category} />
               ))}
             </div>
           </div>
@@ -60,9 +54,13 @@ const ALlTilesPage = async () => {
 
         {/* GRID */}
         <div className="grid mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {allTilesInfo.map((tilesInfo, ind) => (
-            <TilesCard key={ind} tilesInfo={tilesInfo} />
-          ))}
+          {filterTiles.length > 0 ? (
+            filterTiles.map((tilesInfo, ind) => (
+              <TilesCard key={ind} tilesInfo={tilesInfo} />
+            ))
+          ) : (
+            <NoDataUi />
+          )}
         </div>
       </div>
     </div>

@@ -3,9 +3,15 @@ import { Button, Separator } from "@heroui/react";
 import Image from "next/image";
 import { FaFlask, FaGreaterThan, FaHeart } from "react-icons/fa6";
 import TilesCate from "@/../public/categories.json";
+import GetProducts from "@/utils/GetProducts";
 
-const TilesDetailsPage = () => {
-  const tiles = AllTiles.find((tile) => tile.id === "tile_009");
+const TilesDetailsPage = async ({ params }) => {
+  const { tilesID } = await params;
+  const paramLen = tilesID.length;
+  const id = tilesID.slice(paramLen - 8, paramLen);
+
+  const allTilesInfo = await GetProducts();
+  const tiles = allTilesInfo.find((tile) => tile.id === id);
 
   if (!tiles) return <p className="p-10">Tile not found</p>;
 
