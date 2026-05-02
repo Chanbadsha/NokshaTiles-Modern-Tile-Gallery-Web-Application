@@ -7,6 +7,7 @@ import logo from "@/../public/logo.png";
 import NavLinks from "@/utils/NavLinks";
 import { authClient } from "@/lib/auth-client";
 import toast from "react-hot-toast";
+import { redirect } from "next/navigation";
 
 const NavBar = () => {
   const {
@@ -28,7 +29,7 @@ const NavBar = () => {
       pathName: "All Tiles",
     },
     {
-      href: "/profile",
+      href: "/dashboard",
       pathName: "My Profile",
     },
   ];
@@ -39,6 +40,8 @@ const NavBar = () => {
       fetchOptions: {
         onSuccess: () => {
           toast.success("User Logout");
+          refetch();
+          redirect("/");
         },
       },
     });
@@ -82,7 +85,7 @@ const NavBar = () => {
             <Image
               src={logo}
               alt="NakshaTiles Logo"
-              className="lg:w-10 h-auto hidden md:flex"
+              className="lg:w-10 h-auto hidden lg:flex"
             ></Image>{" "}
             <h1 className="font-semibold font-epi text-2xl lg:text-3xl text-[#2e3038]">
               <span className="font-bold text-[#191b23]">Naksha</span>Tiles
