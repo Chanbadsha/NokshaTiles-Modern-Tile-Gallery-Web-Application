@@ -24,6 +24,17 @@ const Dashboard = () => {
     });
   };
 
+  const isValidUrl = (url) => {
+    try {
+      new URL(url);
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
+  const imageSrc = isValidUrl(user?.image) ? user.image : "/default-avatar.png";
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Cover Banner */}
@@ -35,7 +46,7 @@ const Dashboard = () => {
           {/* Avatar */}
           <div className="relative">
             <Image
-              src={user?.image || "/default-avatar.png"}
+              src={imageSrc}
               alt={user?.name || "User"}
               width={120}
               height={120}

@@ -47,6 +47,17 @@ const NavBar = () => {
     });
   };
 
+  const isValidUrl = (url) => {
+    try {
+      new URL(url);
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
+  const imageSrc = isValidUrl(user?.image) ? user.image : "/default-avatar.png";
+
   return (
     <nav className="sticky top-0 z-40 w-full border-b border-separator bg-transparent backdrop-blur-xl">
       <header className="mx-auto flex h-16 container  items-center justify-between px-6">
@@ -107,8 +118,8 @@ const NavBar = () => {
               <Link href="/dashboard">
                 <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-gray-200 hover:ring-[#3B82F6] transition duration-300 shadow-sm hover:shadow-md">
                   <Image
-                    src={user.image || "/default-avatar.png"}
-                    alt={user.name || "User"}
+                    src={imageSrc}
+                    alt={user?.name || "User"}
                     fill
                     className="object-cover"
                   />
