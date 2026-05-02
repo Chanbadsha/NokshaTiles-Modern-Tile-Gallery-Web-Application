@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 import tilesCategories from "@/../public/categories.json";
+import GetProducts from "@/utils/GetProducts";
 import CategoriesCard from "../Shared/CategoriesCard";
+import TilesCard from "../Shared/TilesCard";
 
-const CategoriesSection = () => {
+const CategoriesSection = async () => {
+  const allTiles = await GetProducts();
   return (
     <section className="bg-gray-50/50 py-10 lg:py-16">
       <div className="container mx-auto px-4">
@@ -31,8 +34,8 @@ const CategoriesSection = () => {
 
         {/* GRID */}
         <div className="grid pt-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 lg:gap-8">
-          {tilesCategories.slice(0, 4).map((cardInfo) => (
-            <CategoriesCard key={cardInfo.id} cardInfo={cardInfo} />
+          {allTiles.slice(0, 4).map((tilesInfo) => (
+            <TilesCard key={tilesInfo.id} tilesInfo={tilesInfo} />
           ))}
         </div>
       </div>

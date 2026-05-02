@@ -6,6 +6,7 @@ import { useState } from "react";
 import logo from "@/../public/logo.png";
 import NavLinks from "@/utils/NavLinks";
 import { authClient } from "@/lib/auth-client";
+import toast from "react-hot-toast";
 
 const NavBar = () => {
   const {
@@ -31,6 +32,17 @@ const NavBar = () => {
       pathName: "My Profile",
     },
   ];
+
+  const handleLogout = async (e) => {
+    e.preventDefault();
+    await authClient.signOut({
+      fetchOptions: {
+        onSuccess: () => {
+          toast.success("User Logout");
+        },
+      },
+    });
+  };
 
   return (
     <nav className="sticky top-0 z-40 w-full border-b border-separator bg-transparent backdrop-blur-xl">
@@ -87,25 +99,41 @@ const NavBar = () => {
         {/* Right side */}
         <div className="flex items-center gap-4">
           {user ? (
-            <Link href="/dashboard">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-gray-200 hover:ring-[#3B82F6] transition duration-300 shadow-sm hover:shadow-md">
-                <Image
-                  src={user.image || "/default-avatar.png"}
-                  alt={user.name || "User"}
-                  fill
-                  className="object-cover"
-                />
+            <>
+              {/* Avatar */}
+              <Link href="/dashboard">
+                <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-gray-200 hover:ring-[#3B82F6] transition duration-300 shadow-sm hover:shadow-md">
+                  <Image
+                    src={user.image || "/default-avatar.png"}
+                    alt={user.name || "User"}
+                    fill
+                    className="object-cover"
+                  />
 
-                {/* Online indicator */}
-                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-white"></span>
-              </div>
-            </Link>
+                  {/* Online indicator */}
+                  <span className="absolute bottom-1 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></span>
+                </div>
+              </Link>
+
+              {/* Logout Button */}
+              <Button
+                onClick={handleLogout}
+                className="
+          px-4 py-2 rounded-lg font-medium
+          bg-gray-100 text-gray-700
+          hover:bg-red-50 hover:text-red-600
+          transition-all duration-300
+        "
+              >
+                Logout
+              </Button>
+            </>
           ) : (
             <Link href="/auth/signin">
               <Button
                 className="
           px-5 py-2 rounded-lg font-medium
-          bg-gradient-to-r from-[#3B82F6] to-[#2563eb]
+          bg-linear-to-r from-[#3B82F6] to-[#2563eb]
           text-white shadow-sm
           hover:shadow-md hover:scale-[1.02]
           transition-all duration-300

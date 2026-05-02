@@ -59,7 +59,7 @@ const TilesCard = ({ tilesInfo }) => {
             href={`/tiles-details/${ids}`}
             className="inline-flex justify-end items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 transition-all group"
           >
-            View All
+            View Details
             <FaArrowRightLong className="group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
         </Card.Footer>
