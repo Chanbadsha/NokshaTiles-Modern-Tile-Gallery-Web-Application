@@ -8,6 +8,8 @@ import SearchTiles from "@/lib/SearchTiles";
 import SearchBox from "@/utils/SearchBox";
 import NoDataUi from "@/components/Shared/NoDataUi";
 import CategoryFilter from "@/utils/CategoryFilter";
+import { Suspense } from "react";
+import GridSkeleton from "@/utils/GridSkeleton";
 
 const ALlTilesPage = async ({ searchParams }) => {
   const allTilesInfo = await GetProducts();
@@ -52,12 +54,15 @@ const ALlTilesPage = async ({ searchParams }) => {
         </div>
 
         {/* GRID */}
+
         {filterTiles.length > 0 ? (
-          <div className="grid mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filterTiles.map((tilesInfo, ind) => (
-              <TilesCard key={ind} tilesInfo={tilesInfo} />
-            ))}
-          </div>
+          <Suspense fallback={<GridSkeleton />}>
+            <div className="grid mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {filterTiles.map((tilesInfo, ind) => (
+                <TilesCard key={ind} tilesInfo={tilesInfo} />
+              ))}
+            </div>
+          </Suspense>
         ) : (
           <NoDataUi />
         )}
