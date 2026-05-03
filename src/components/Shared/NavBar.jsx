@@ -39,7 +39,7 @@ const NavBar = () => {
     await authClient.signOut({
       fetchOptions: {
         onSuccess: () => {
-          toast.success("User Logout");
+          toast.success("You’ve been logged out");
           refetch();
           redirect("/");
         },

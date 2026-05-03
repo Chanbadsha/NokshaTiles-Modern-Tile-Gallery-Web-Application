@@ -13,6 +13,7 @@ import {
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const EditProfile = () => {
   const router = useRouter();
@@ -39,6 +40,7 @@ const EditProfile = () => {
     // Only call API if something changed
     if (Object.keys(payload).length > 0) {
       await authClient.updateUser(payload);
+      toast.success("Your profile has been updated");
       router.push("/dashboard");
     }
   };

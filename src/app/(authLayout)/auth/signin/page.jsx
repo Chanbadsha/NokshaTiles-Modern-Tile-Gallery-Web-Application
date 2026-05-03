@@ -46,7 +46,7 @@ const LoginPage = () => {
           icon: "❌",
         });
       } else {
-        toast.success("Welcome back! 🎉");
+        toast.success("Welcome back!");
       }
     } finally {
       setLoading(false);
@@ -60,6 +60,7 @@ const LoginPage = () => {
         provider,
         callbackURL,
       });
+      toast.success("Signup successful with Google");
     } catch (error) {
       toast(error?.message || "Signup failed ❌", {
         icon: "❌",

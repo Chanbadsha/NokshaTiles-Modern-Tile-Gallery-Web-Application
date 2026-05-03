@@ -16,7 +16,7 @@ const Dashboard = () => {
     await authClient.signOut({
       fetchOptions: {
         onSuccess: () => {
-          toast.success("user logout");
+          toast.success("You’ve been logged out");
           refetch();
           redirect("/");
         },
