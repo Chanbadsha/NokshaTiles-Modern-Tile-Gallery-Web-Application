@@ -4,13 +4,17 @@ import { authClient } from "@/lib/auth-client";
 import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
 import { Button, Input, InputGroup, Label, TextField } from "@heroui/react";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { redirect, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { FaGithub, FaGoogle } from "react-icons/fa6";
 
 const SignUpPage = () => {
+  const searchParams = useSearchParams();
+  const callbackURL = searchParams.get("callbackUrl")?.startsWith("/")
+    ? searchParams.get("callbackUrl")
+    : "/";
   const {
     register,
     handleSubmit,
@@ -27,7 +31,7 @@ const SignUpPage = () => {
       const { data, error } = await authClient.signUp.email({
         ...formData,
         rememberMe: true,
-        callbackURL: "/",
+        callbackURL,
       });
 
       if (error) {
@@ -49,12 +53,12 @@ const SignUpPage = () => {
 
       await authClient.signIn.social({
         provider,
+        callbackURL,
       });
     } catch (error) {
       toast(error?.message || "Signup failed ❌", {
         icon: "❌",
       });
-      console.error(error);
     } finally {
       setLoadingProvider(null);
     }

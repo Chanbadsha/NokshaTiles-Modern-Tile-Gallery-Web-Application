@@ -1,19 +1,26 @@
 import { NextResponse } from "next/server";
 import { auth } from "./lib/auth";
-import { headers } from "next/headers";
 
 export async function proxy(request) {
   const session = await auth.api.getSession({
-    headers: await headers(),
+    headers: request.headers,
   });
 
+  const { pathname, search } = request.nextUrl;
+
   if (!session) {
-    return NextResponse.redirect(new URL("/auth/signin", request.url));
+    const loginUrl = new URL("/auth/signin", request.url);
+
+    const callbackUrl = pathname + search;
+
+    loginUrl.searchParams.set("callbackUrl", callbackUrl);
+
+    return NextResponse.redirect(loginUrl);
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/dashboard", "/tiles-details/:path*"],
+  matcher: ["/dashboard", "/dashboard/edit-profile", "/tiles-details/:path*"],
 };

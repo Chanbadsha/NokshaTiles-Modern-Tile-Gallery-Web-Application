@@ -11,12 +11,18 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { FaGithub, FaGoogle } from "react-icons/fa6";
 
 const LoginPage = () => {
+  const searchParams = useSearchParams();
+  const callbackURL = searchParams.get("callbackUrl")?.startsWith("/")
+    ? searchParams.get("callbackUrl")
+    : "/";
+
   const {
     register,
     handleSubmit,
@@ -32,7 +38,7 @@ const LoginPage = () => {
       const { data, error } = await authClient.signIn.email({
         ...formData,
         rememberMe: true,
-        callbackURL: "/",
+        callbackURL,
       });
 
       if (error) {
@@ -52,6 +58,7 @@ const LoginPage = () => {
 
       await authClient.signIn.social({
         provider,
+        callbackURL,
       });
     } catch (error) {
       toast(error?.message || "Signup failed ❌", {
