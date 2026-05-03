@@ -12,7 +12,7 @@ import { FaGithub, FaGoogle } from "react-icons/fa6";
 
 const SignUpPage = () => {
   const searchParams = useSearchParams();
-  const callbackURL = searchParams.get("callbackUrl")?.startsWith("/")
+  const callbackUrl = searchParams.get("callbackUrl")?.startsWith("/")
     ? searchParams.get("callbackUrl")
     : "/";
   const {
@@ -31,7 +31,7 @@ const SignUpPage = () => {
       const { data, error } = await authClient.signUp.email({
         ...formData,
         rememberMe: true,
-        callbackURL,
+        callbackURL: callbackUrl,
       });
 
       if (error) {
@@ -53,7 +53,7 @@ const SignUpPage = () => {
 
       await authClient.signIn.social({
         provider,
-        callbackURL,
+        callbackURL: callbackUrl,
       });
       toast.success("Signup successful with Google");
     } catch (error) {
