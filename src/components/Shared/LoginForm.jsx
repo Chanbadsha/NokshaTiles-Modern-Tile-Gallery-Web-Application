@@ -60,7 +60,6 @@ const LoginForm = () => {
         provider,
         callbackURL: callbackUrl,
       });
-      toast.success("Signup successful with Google");
     } catch (error) {
       toast(error?.message || "Signup failed ❌", {
         icon: "❌",
