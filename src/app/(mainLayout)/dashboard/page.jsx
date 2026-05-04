@@ -12,6 +12,9 @@ import DashboardUI from "@/components/DashBoard/DashboardUI";
 const Dashboard = () => {
   const { data: session, refetch } = authClient.useSession();
   const user = session?.user;
+  if (!user) {
+    redirect("/auth/signin");
+  }
   const handleLogout = async () => {
     await authClient.signOut({
       fetchOptions: {
